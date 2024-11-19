@@ -3,5 +3,5 @@ export default function ShopLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <section className="main-content">hola{children}</section>;
+  return <section className="main-content">{children}</section>;
 }

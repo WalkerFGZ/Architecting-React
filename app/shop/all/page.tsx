@@ -1,16 +1,16 @@
 import AddToCartButton from "@/ui/components/Button/AddToCartButton";
 import Image from "next/image";
 
-//export const revalidate = 300;
-export default async function Seasonal() {
+export default async function All() {
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_BASE_URL}/api/pies?category=seasonal`
+    `${process.env.NEXT_PUBLIC_BASE_URL}/api/pies?category=all`,
+    { cache: "no-cache" }
   );
   const pies = await res.json();
   return (
     <>
       <section className="main-content">
-        <h2>Seasonal Pies</h2>
+        <h2>All Pies</h2>
         <div className="gallery-wrapper">
           {pies.map((pie: any) => (
             <>
