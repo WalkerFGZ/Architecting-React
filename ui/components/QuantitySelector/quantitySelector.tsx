@@ -1,7 +1,8 @@
 "use client";
+
 import React, { useState } from "react";
 
-interface QuanitySelectorProps {
+interface QuantifySelectorProps {
   item: {
     id: number;
     name: string;
@@ -11,7 +12,8 @@ interface QuanitySelectorProps {
   };
 }
 
-export default function QuantitySelector({ item }: QuanitySelectorProps) {
+export default function QuantitySelector({ item }: QuantifySelectorProps) {
+  debugger;
   const [quantity, setQuantity] = useState(item.quantity);
 
   const handleQuantityChange = async (newQuantity: number) => {

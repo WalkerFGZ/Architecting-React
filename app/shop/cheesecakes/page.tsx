@@ -4,7 +4,7 @@ import { Suspense } from "react";
 
 export default async function Cheesecakes() {
   return (
-    <Suspense fallback={<Loading />}>
+    <Suspense fallback={<Loading title="Cheesecakes" />}>
       <CheesecakesComponent />
     </Suspense>
   );
